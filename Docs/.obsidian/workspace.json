@@ -1,0 +1,203 @@
+{
+  "main": {
+    "id": "11990684da952774",
+    "type": "split",
+    "children": [
+      {
+        "id": "33ce05e1d816e2ca",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82589b5377ca66b5",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 2646.5189825432303,
+                  "y": 2967.4808777470803,
+                  "zoom": -1.6682203601655767
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e619f218899949a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6d8714242e2800b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "913a5f5ab5067132",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8e1362c2766164a1",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9e3399b1cecfa560",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "c3a6d0616e5e7d86",
+    "type": "split",
+    "children": [
+      {
+        "id": "ffae2b51f3fbf0f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "936d0aeec2569a81",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Untitled.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "758af9d092f47850",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Untitled.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "3aed6547f4ac538a",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "44ed17144a230951",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "26170d6bb915fb0c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Untitled.canvas",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "82589b5377ca66b5",
+  "lastOpenFiles": [
+    "literature survey papers/Deep Reinforcement Learning‑Driven Intelligent Portfolio Management with Green Computing.pdf",
+    "literature survey papers/1_Smart Tangency Portfolio Deep Reinforcement Learning for Dynamic Rebalancing and Risk–Return Trade-Off.pdf",
+    "literature survey papers/Risk-Sensitive Deep Reinforcement Learning for Portfolio Optimization.pdf",
+    "literature survey papers/Risk-Adjusted Deep Reinforcement Learning for Portfolio Optimization A Multi-reward Approach.pdf",
+    "Pasted image 20260306141224.png",
+    "literature survey papers/Smart Tangency Portfolio Deep Reinforcement Learning for Dynamic Rebalancing and Risk–Return Trade-Off.pdf",
+    "literature survey papers",
+    "literature suvey",
+    "New folder",
+    "Untitled.canvas"
+  ]
+}
