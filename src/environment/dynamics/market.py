@@ -12,9 +12,6 @@ class MarketDynamics:
 
 
     def reset(self):
-        """
-        Initialize market with random starting point
-        """
         if hasattr(self, "fixed_start") and self.fixed_start is not None:
             self.current_index = self.fixed_start
         else:
@@ -24,9 +21,6 @@ class MarketDynamics:
 
 
     def step(self):
-        """
-        Move to next timestep (circular)
-        """
         self.current_index = (self.current_index + 1) % self.T
 
         return self._get_state(self.current_index)

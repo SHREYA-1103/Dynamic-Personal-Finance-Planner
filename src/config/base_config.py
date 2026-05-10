@@ -2,14 +2,6 @@ import numpy as np
 
 
 class BaseConfig:
-    """
-    Final configuration for RL financial planning.
-
-    Design:
-    - Balanced growth vs risk
-    - Strong but learnable ruin penalty
-    - No unnecessary signals
-    """
 
     # Environment
     DEBUG = False

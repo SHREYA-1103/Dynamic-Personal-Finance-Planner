@@ -10,17 +10,17 @@ def compute_reward(
 ):
     eps = config.EPS
 
-    # Growth (normalized)
+    # Growth
     growth = np.log((curr_wealth + eps) / (prev_wealth + eps))
     growth = np.clip(growth, -0.1, 0.1)
     growth_norm = growth / 0.1   # [-1, 1]
     growth_term = config.GROWTH_WEIGHT * growth_norm
 
-    # Drawdown (fixed)
+    # Drawdown
     drawdown = abs(drawdown)     # [0, 1]
     drawdown_term = -config.DRAWDOWN_WEIGHT * drawdown
 
-    # Buffer (normalized)
+    # Buffer
     buffer_gap = max(0.0, config.BUFFER_TARGET - buffer_months)
     buffer_norm = min(buffer_gap / config.BUFFER_TARGET, 1.0)
     buffer_term = -config.BUFFER_WEIGHT * buffer_norm

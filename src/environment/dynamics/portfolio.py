@@ -84,7 +84,7 @@ class PortfolioDynamics:
 
         new_max_wealth = max(max_wealth, new_wealth)
 
-        # Drawdown (negative value)
+        # Drawdown
         drawdown = (new_wealth - new_max_wealth) / (new_max_wealth + 1e-8)
 
         cash = w_new[2] * new_wealth

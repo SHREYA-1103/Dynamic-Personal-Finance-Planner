@@ -13,9 +13,6 @@ def make_env(market_df, user_df, config):
     return FinancialEnv(market_df, user_df, config)
 
 
-# =========================
-# CVaR-AWARE CALLBACK (SAFE VERSION)
-# =========================
 class CVaRCallback(BaseCallback):
     def __init__(self, alpha=0.1):
         super().__init__()
@@ -41,15 +38,12 @@ class CVaRCallback(BaseCallback):
         if len(self.recent_rewards) > 1000:
             self.recent_rewards.pop(0)
 
-        # -------------------------
-        # SAFE CVaR BIAS (NO BUFFER HACK)
-        # -------------------------
         if len(self.recent_rewards) > 100:
             threshold = np.percentile(self.recent_rewards, self.alpha * 100)
 
             # Slightly emphasize bad outcomes
             if reward < threshold:
-                self.locals["rewards"][0] *= 1.2  # mild bias (safe)
+                self.locals["rewards"][0] *= 1.2  
 
         # Episode end → compute CVaR
         if done:
@@ -71,9 +65,6 @@ class CVaRCallback(BaseCallback):
             self.entropy_losses.append(logger_dict["train/entropy_loss"])
 
 
-# =========================
-# TRAIN FUNCTION
-# =========================
 def train_cvar(
     market_df,
     user_df,
@@ -83,12 +74,11 @@ def train_cvar(
 ):
     env = DummyVecEnv([lambda: make_env(market_df, user_df, config)])
 
-    # IMPORTANT: stable normalization
     env = VecNormalize(
         env,
         norm_obs=True,
         norm_reward=True,
-        clip_reward=5.0   # prevents reward spikes
+        clip_reward=5.0   
     )
 
     cvar_callback = CVaRCallback(alpha=0.1)
@@ -99,9 +89,9 @@ def train_cvar(
         learning_rate=1e-4,
         buffer_size=100_000,
         batch_size=256,
-        gamma=0.999,           # long-term focus
+        gamma=0.999,           
         tau=0.02,
-        ent_coef=0.01,         # reduced exploration → safer policy
+        ent_coef=0.01,         
         verbose=1,
         tensorboard_log="./outputs/tensorboard/cvar/",
         policy_kwargs=dict(net_arch=[128, 128])
@@ -112,9 +102,6 @@ def train_cvar(
     os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
     model.save(model_save_path)
 
-    # =========================
-    # LOSS PLOTS
-    # =========================
     plt.figure()
     plt.plot(cvar_callback.actor_losses, label="Actor Loss")
     plt.plot(cvar_callback.critic_losses, label="Critic Loss")
@@ -126,9 +113,6 @@ def train_cvar(
     plt.grid()
     plt.show()
 
-    # =========================
-    # CVaR PLOT
-    # =========================
     if len(cvar_callback.cvar_values) > 10:
         returns = np.array(cvar_callback.cvar_values)
 

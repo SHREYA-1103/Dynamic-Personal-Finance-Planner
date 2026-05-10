@@ -1,9 +1,6 @@
 import numpy as np
 
 class GlidePath:
-    """
-    Age-based lifecycle allocation
-    """
 
     def __init__(self, max_age=60):
         self.max_age = max_age
